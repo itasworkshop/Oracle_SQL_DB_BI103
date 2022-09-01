@@ -1,1 +1,91 @@
 Introduction to Oracle
+
+Data
+useful information
+
+Database(DBMS)- Database management system
+the system used for organising or data is call database DBMS
+examples:
+file system organisation
+microsoft excel
+microsoft access
+
+
+RDBMS - Relational Database Management System
+relational --> there is some relationship among data
+
+organising your data in terms of rows and column --> Table
+one table is logically related to another table
+
+example:
+master -detail relationship
+first department --> then student will take admission
+
+Table --> 	row
+				column --> attribute
+
+departments
+id		name		location
+101	CS			Block-A
+102	EC			Block-B
+103	CE			Block-C
+
+students
+id		name		grade		dept_id
+111	Rajesh	A			101
+222	Suraj		C			103
+333	Tom		D			101
+
+
+examples:
+1) oracle --> Enterprise DB, first company  to relaeas RDBMS software, still number one in market
+2) MySQL --> open source, supported by oracle
+3) SQL server --> Microsoft
+4) DB2 --> IBM
+5) Sybase --> open source
+6) Postgres --> open source
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

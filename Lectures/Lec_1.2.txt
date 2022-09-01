@@ -1,0 +1,30 @@
+SQL
+
+Structured Query Language --> to interact with db and used to manipulate, CRUD operations, analytical operation on data
+
+SQL commands/syntax will be common for all RDBMS
+
+SQL
+
+Structured Query Language
+
+Unloacking HR schema and changing password
+connect sys as sysdba
+password --> during installation
+
+show user 
+
+alter user hr identified by data123 account unlock;
+
+conn hr
+provide new password and hr user should be connected.
+
+Fetching data from database using SQL
+
+select * from tab;
+
+describe departments;
+
+select * from departments;
+
+select department_id,department_name from departments;
