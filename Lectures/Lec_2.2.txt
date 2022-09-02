@@ -1,0 +1,51 @@
+Select Clause --> fetching record of your choice
+
+1) Select 
+select employee_id,first_name,salary,salary+500 as bonus from employees;
+
+Alias --> giving it a nickname
+
+select employee_id,first_name,salary,(salary+(500*5)) bonus from employees;
+
+2) NULL --> empty values
+WAQ to display employees record whose not earning any commission?
+
+wrong query --> null is not zero
+
+select employee_id, first_name, salary, commission_pct
+from employees
+where commission_pct = 0;
+
+select employee_id, first_name, salary, commission_pct
+from employees
+where commission_pct is null;
+
+select employee_id, first_name, salary, commission_pct
+from employees
+where commission_pct is not null;
+
+select employee_id, first_name, salary
+from employees
+where first_name like 'T%';
+
+select employee_id, first_name, salary
+from employees
+where first_name like 'David';
+
+select employee_id, first_name, salary
+from employees
+where first_name = 'David';
+
+WQA for displaying employees whose salary is greater 5000?
+
+select employee_id, first_name, salary
+from employees
+where salary > 5000;
+
+
+
+
+
+
+
+

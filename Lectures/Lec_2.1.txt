@@ -1,0 +1,30 @@
+SQL
+
+DML --> Data manipulation Language
+update, delete, insert
+
+DDL --> Data Definition Language
+create, alter table, drop
+
+drop table student;
+
+create table student(id number,name varchar2(30), dept_id number);
+
+insert into student values(111,'Rajesh',101);
+
+update table student set dept_id = 105 where id = 103;
+
+
+Note:- If we skip where clause then it would update/delete all data.
+
+Deleting the record
+
+delete from student where id = 102;
+
+
+
+
+
+
+
+
