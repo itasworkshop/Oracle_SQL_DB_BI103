@@ -1,0 +1,49 @@
+Join in RDBMS
+displaying data from multiple tables
+
+WAQ to display employee name with his respective department name.
+
+select e.first_name, d.department_name
+from employees e,departments d
+where e.department_id = d.department_id;
+
+1) cross join --> everything is mapped with everything
+select e.first_name, d.department_name
+from employees e,departments d;
+
+2) Equi Join 
+select e.first_name, d.department_name
+from employees e,departments d
+where e.department_id = d.department_id;
+
+3) Inner join
+select e.first_name, d.department_name
+from employees e,departments d
+where e.department_id = d.department_id;
+
+4) Outer Join --> extra data from both tables
+select e.first_name, d.department_name
+from employees e full outer join departments d
+on e.department_id = d.department_id;
+
+5) Right Outer join --> extra data from right hand side table
+select e.first_name, d.department_name
+from employees e right outer join departments d
+on e.department_id = d.department_id;
+
+6) Left Outer join --> extra data from left hand side table
+select e.first_name, d.department_name
+from employees e left outer join departments d
+on e.department_id = d.department_id;
+
+7) Self Join --> joining one table with itself
+
+WAQ to display employees name along with their manager name?
+select e.first_name, m.first_name manager_name
+from employees e,employees m
+where e.manager_id = m.employee_id;
+
+
+
+
+
