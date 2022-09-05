@@ -1,0 +1,77 @@
+Functions in sql
+
+1) Single row functions
+2) Aggreagate functions
+
+1) to_char() function
+
+select employee_id, first_name,to_char(hire_date,'MON') from employees 
+where to_char(hire_date,'MON') like 'DEC';
+
+Aggregate Functions --> performing functionality on group of data
+
+avg 
+count
+sum
+min
+max
+
+select max(salary) from employees;
+
+exa:- WAQ to diplay maximum salary department wise.
+
+select department_id, max(salary)
+from employees
+group by department_id;
+
+WAQ to display number of employees department wise.
+select department_id, count(*)
+from employees
+group by department_id;
+Condition with aggregate function-->
+we can use where , we use having clause
+
+WAQ to display number of employees department wise only for department with more than 5 employees.
+
+select department_id, count(*)
+from employees
+group by department_id
+having count(*) > 5;
+
+order by clause
+select department_id, count(*)
+from employees
+group by department_id
+having count(*) > 5
+order by department_id;
+
+select department_id, count(*)
+from employees
+group by department_id
+having count(*) > 5
+order by department_id desc;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

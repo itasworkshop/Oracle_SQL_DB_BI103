@@ -2,7 +2,4 @@
 2) WAQ to display employees record who joined in December month?
 3) WAQ to display emplyoees record who doesn't have any manager?
 4) WAQ to display employees record with bonus, bonus will be salary+commission?
-select employee_id, salary, commission_pct, salary+ nvl(commission_pct,0) bonus from employees;
-
-
 5) WAQ to display whose salary is between 5000 and 10000?
