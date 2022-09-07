@@ -1,0 +1,15 @@
+1. WAQ to display number of employees joined year wise.
+2. WAQ to top 2 earning employee name and salary in each department. 
+3. How many rows will be displayed in each case for below joins
+
+Table-A				Table-B
+1							1
+1							1
+0							1
+1
+
+1) cross join-?
+2) natural join-?
+3) inner join-?
+4) Right outer join-?
+5) Left outer join-?
