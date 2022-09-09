@@ -1,0 +1,48 @@
+PL/SQL --> Procedural Language SQL
+
+procedural -
+step by step execution/flow of program/query
+compiled language
+
+exemples: - if-else, loops, variables, begin-end, UDF, Functions/procedures
+
+stored procedure --> pre parsed query
+like functions , takes some input, perform calculation, may or may not result
+
+Advantages of PL/SQL
+These are the advantages of PL/SQL.
+Block Structures: PL SQL consists of blocks of code, which can be nested within each other. Each block forms a unit of a task or a logical module. PL/SQL Blocks can be stored in the database and reused.
+Procedural Language Capability: PL SQL consists of procedural language constructs such as conditional statements (if else statements) and loops like (FOR loops).
+Better Performance: PL SQL engine processes multiple SQL statements simultaneously as a single block, thereby reducing network traffic.
+Error Handling: PL/SQL handles errors or exceptions effectively during the execution of a PL/SQL program. Once an exception is caught, specific actions can be taken depending upon the type of the exception or it can be displayed to the user with a message.
+
+1) Minimum PL/SQL block
+hello world in plsql
+
+SQL> begin
+  2  dbms_output.put_line('Hello World!');
+  3  end;
+  4
+  5  /
+
+PL/SQL procedure successfully completed.
+
+SQL> set serveroutput on;
+SQL> /
+Hello World!
+
+PL/SQL procedure successfully completed.
+
+2) block with variables
+DECLARE
+	name varcher2(20) := 'Ravi Kishan';
+BEGIN
+	dbms_output.put_line('Hello ',name);
+END;
+
+
+
+
+
+
+
