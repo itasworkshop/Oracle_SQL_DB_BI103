@@ -1,0 +1,51 @@
+Named Block
+collection of plsql block and queries which may accept some parameters and may or may not return result.
+
+Functions and procedures
+
+1) Function:- named plsql block which returns result.
+CREATE or REPLACE FUNCTION addition(num1 IN integer, num2 IN integer)
+    RETURN integer
+is
+    result integer;
+BEGIN
+    result := num1 + num2;
+    RETURN result;
+END;
+
+begin
+dbms_output.put_line(addition(20,30));
+end;
+
+2) Procedures:- named plsql block which performs some task and may or may not return result.
+
+create or replace procedure printMe(name IN varchar2)
+is
+    message VARCHAR2(20) := 'hello ';
+begin
+    message := message || name;
+    dbms_output.put_line(message);
+end printMe;
+
+begin
+    printme('Suraj');
+end;
+
+
+create or replace procedure giveSalaryForId(eid IN integer)
+is
+    esalary employees.salary%TYPE;
+begin
+    select salary into esalary from employees where employee_id = eid;
+    dbms_output.put_line(esalary);
+end;
+
+begin
+givesalaryforid(200);
+end;
+
+
+1) Create student grade calculator as function and procedure both.
+2) create procedure for fetching maximum salary employee in department 100.
+
+
