@@ -1,0 +1,66 @@
+Cursor
+memory area in database
+
+create table emp as select * from employees;
+
+Types of cursor
+1. Implicit cursor
+the cursor managed by oracle engine itself
+
+Attribute
+1. SQL%FOUND
+2. SQL%NOTFOUND
+3. SQL%ROWCOUNT
+4. SQL%ISOPEN --> always false --> as soon as we use oracle closes this
+
+Update salary in department no 110; new salary will be salary +500.
+
+declare
+    total_rows integer;
+BEGIN
+    update emp set salary = salary +500
+    where department_id = 110;
+    IF SQL%NOTFOUND then
+        dbms_output.put_line('no records found');
+    ELSIF SQL%FOUND then
+        total_rows := SQL%ROWCOUNT;
+        dbms_output.put_line('Total rows updated are '||total_rows);
+    END IF;
+END;
+
+2. Explicit cursor
+where we open,fetch and close, manage cursor, useful when we are dealing with multiple records.
+
+multi record scenario
+exact fetch returns more than requested number of rows
+
+
+declare
+    eid emp.employee_id%TYPE;
+begin
+    select employee_id into eid from emp where department_id = 60;
+    dbms_output.put_line(eid);
+end;
+
+DECLARE
+    did emp.department_id%TYPE := 60;
+    erecord emp%ROWTYPE;
+CURSOR emp_cur is
+    select * from emp where department_id = did;
+BEGIN
+    OPEN emp_cur;
+    LOOP
+        FETCH emp_cur into erecord;
+        EXIT when emp_cur%NOTFOUND;
+        dbms_output.put_line(SQL%ROWCOUNT);
+        dbms_output.put_line(erecord.employee_id||erecord.first_name||erecord.salary);
+    END LOOP;
+    CLOSE emp_cur;
+END;
+
+
+
+
+
+
+
