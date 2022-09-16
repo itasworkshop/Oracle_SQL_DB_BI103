@@ -1,0 +1,41 @@
+Exception
+causes breaking of flow of execution
+
+Exception Handling
+gracefully ending our application with or without inturpting
+
+with exception
+declare
+    result integer;
+begin
+    dbms_output.put_line('before exception');
+    result := 10/0;
+    dbms_output.put_line('business logic '||result);
+    dbms_output.put_line('after exception');
+end;
+
+
+example without exception
+declare
+    result integer;
+begin
+    dbms_output.put_line('before exception');
+    result := 10/2;
+    dbms_output.put_line('business logic '||result);
+    dbms_output.put_line('after exception');
+end;
+
+Handling exception
+declare
+    result integer;
+begin
+    dbms_output.put_line('before exception');
+    result := 10/0;
+    dbms_output.put_line('business logic '||result);
+    
+    EXCEPTION
+        when zero_divide then
+            dbms_output.put_line('OOPs something went wrong- divide by zero.');    
+    dbms_output.put_line('after exception');
+end;
+

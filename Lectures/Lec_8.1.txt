@@ -1,0 +1,11 @@
+Trigger
+these are also named plsql block which are invoked automatically based on some triggering event
+
+create or replace trigger emp_table_tr
+before
+    insert or update of salary,department_id or delete on emp
+begin
+    dbms_output.put_line('employee record is getting changed.');
+end;
+
+delete from emp where employee_id = 206;

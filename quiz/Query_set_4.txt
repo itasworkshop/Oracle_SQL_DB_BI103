@@ -1,0 +1,1 @@
+1. Create a trigger which stores information of the user and timestamp of operation updating salary in emp table, log this into separate table emp_log table;
