@@ -1,0 +1,57 @@
+OBIEE --> Oracle Business Intelligence Enterprise Edition
+
+BI --> stretegies and technologies to perform data analysis and decision making and management Information.
+
+OBIEE -->
+--> gather ,store and analyse data 
+--> reports and dashboards
+
+OBIEE -->
+
+Clients  -->  BI Presenattion	-->   BI Server  --> Data Sources
+			 <--			Server     <--      |       <--
+														 |
+													Repository      
+			             
+
+1) Clients --> access BI information
+2) BI Presenattion Server -->
+		--> Visualization
+		--> request from client
+		--> receives data from BI Server
+		--> Dashboards
+3) BI Server
+		--> server
+		--> engine to generate dynamic SQL query to sources
+		--> structures result for BI Presentaion Server
+4) Repository
+		--> stores metadatabases used by BI Server
+		--> import meta database from sources
+5) Data Sources
+		--> DB(OLTP -- insert, update, delete), OLAP (Analytical 								Processing)
+		--> xml ,file, flat files etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
