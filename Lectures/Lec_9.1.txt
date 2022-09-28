@@ -50,6 +50,52 @@ It will install fusion middleware dependancy.
 2) Start OBIEE installation
 run as admin
 
+3) Repository creation
+start rcu batch file by double click from path
+C:\Oracle\Middleware\Oracle_Home\oracle_common\bin
+
+4) check pdb if you face compatibilty error
+(19c ,hopefull it will work with 21c)
+
+select name from v$services;
+alter pluggable database all open;
+
+SQL> select name from v$services;
+
+NAME
+----------------------------------------------------------------
+orclXDB
+orcl
+SYS$BACKGROUND
+SYS$USERS
+orclpdb
+
+SQL> alter pluggable database all open;
+
+Pluggable database altered.
+
+
+5) change orcl to orclpdb(in my case orclpdb)
+
+6) Finish rcu repository creation.
+
+7) config OBIEE
+C:\Oracle\Middleware\Oracle_Home\bi\bin
+
+double click config batch file.
+
+create new schema if you can not connect to existing one.
+
+8) once over open blow links as per your hostname
+Entry points
+        WebLogic Console
+            http://LAPTOP-UTOVS0C6:9500/console
+        Fusion Middleware Control
+            http://LAPTOP-UTOVS0C6:9500/em
+        BI Analytics
+            http://LAPTOP-UTOVS0C6:9502/analytics
+
+
 
 
 
