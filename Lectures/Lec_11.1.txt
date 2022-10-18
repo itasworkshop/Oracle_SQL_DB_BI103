@@ -1,0 +1,19 @@
+Power BI
+
+Business Intelligence
+
+collectiving data from multiple sources --> put into multiple interactive dashboards --> BI reports
+
+Power BI
+mutilpe software
+connectors
+services
+
+Setting up Power BI
+1. download suitable version of power bi from
+https://powerbi.microsoft.com/en-us/downloads/
+
+2. run the respective exe for installation
+
+
+
